@@ -47,10 +47,11 @@ Plans:
   4. Industry context (SaaS, Healthcare, Consumer, Ecommerce, Fintech) changes the critique content with domain-specific heuristics
   5. Critique tone (Constructive vs Roast) adjusts the language and delivery
   6. Response completes in under 10 seconds
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] TBD during plan-phase
+- [ ] 02-01-PLAN.md — Prompt engine (system prompt + contexts + tones + tool definition)
+- [ ] 02-02-PLAN.md — Claude integration (real API calls replacing mock data)
 
 ### Phase 3: Upload System
 **Goal**: Designers can upload UI screenshots with validation, compression, and preview
@@ -104,7 +105,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | ✓ Complete | 2026-02-13 |
-| 2. AI Engine | 0/TBD | Not started | - |
+| 2. AI Engine | 0/2 | Planned | - |
 | 3. Upload System | 0/TBD | Not started | - |
 | 4. Configuration | 0/TBD | Not started | - |
 | 5. Display & Polish | 0/TBD | Not started | - |
