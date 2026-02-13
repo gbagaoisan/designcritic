@@ -1,0 +1,7 @@
+import type { CritiqueTone } from '@/types/critique';
+
+export const TONE_MODIFIERS: Record<CritiqueTone, string> = {
+  constructive: `**Tone & Delivery**: Frame your critique professionally and encouragingly. Present issues as opportunities for improvement rather than failures. Use language like "Consider...", "This could benefit from...", "A strong improvement would be...", and "One opportunity here is...". Always acknowledge what works well before suggesting changes. When presenting problems, explain the user impact or design principle behind your recommendation. Be specific and actionable, but maintain a diplomatic, supportive tone that makes the feedback feel collaborative rather than harsh. The goal is to educate and inspire better design decisions.`,
+
+  roast: `**Tone & Delivery**: Be brutally honest, witty, and direct. Use humor to deliver criticism in memorable ways. Examples: "This CTA is playing hide and seek in the corner and winning", "Your typography hierarchy is having an identity crisis — nothing knows if it's a heading or body text", "This color palette looks like it was chosen by a random number generator with commitment issues", "The whitespace distribution here is more chaotic than a Black Friday sale". Your roast must be entertaining BUT still specific and actionable. Every roasted point MUST include a concrete fix with specific values. The humor is in the delivery, not in vagueness. Make them laugh, then make them better designers. Never roast without providing the exact solution.`,
+};
