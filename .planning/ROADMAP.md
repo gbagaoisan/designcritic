@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Foundation** - Next.js scaffolding, Claude API integration, deployment
 - [x] **Phase 2: AI Engine** - Prompt engineering, domain heuristics, structured output
 - [x] **Phase 3: Upload System** - Drag-and-drop, validation, compression, preview
-- [ ] **Phase 4: Configuration** - Industry context and critique tone selection
+- [x] **Phase 4: Configuration** - Industry context and critique tone selection
 - [ ] **Phase 5: Display & Polish** - Critique output, loading states, error handling
 
 ## Phase Details
@@ -77,10 +77,10 @@ Plans:
   1. Designer can select one industry context from 5 options (SaaS, Healthcare, Consumer, Ecommerce, Fintech)
   2. Designer can select one critique tone from 2 options (Constructive, Roast)
   3. Selected configuration is visually indicated before submission
-**Plans**: 1 plan
+**Plans**: 1 plan (complete)
 
 Plans:
-- [ ] 04-01-PLAN.md — Configuration UI (industry context + tone selectors + submit wiring)
+- [x] 04-01-PLAN.md — Configuration UI (industry context + tone selectors + submit wiring)
 
 ### Phase 5: Display & Polish
 **Goal**: Critiques display beautifully with expandable depth, loading states, and error handling
@@ -107,5 +107,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 1. Foundation | 3/3 | ✓ Complete | 2026-02-13 |
 | 2. AI Engine | 2/2 | ✓ Complete | 2026-02-13 |
 | 3. Upload System | 1/1 | ✓ Complete | 2026-02-13 |
-| 4. Configuration | 0/TBD | Not started | - |
+| 4. Configuration | 1/1 | ✓ Complete | 2026-02-13 |
 | 5. Display & Polish | 0/TBD | Not started | - |
