@@ -77,10 +77,10 @@ Plans:
   1. Designer can select one industry context from 5 options (SaaS, Healthcare, Consumer, Ecommerce, Fintech)
   2. Designer can select one critique tone from 2 options (Constructive, Roast)
   3. Selected configuration is visually indicated before submission
-**Plans**: TBD
+**Plans**: 1 plan
 
 Plans:
-- [ ] TBD during plan-phase
+- [ ] 04-01-PLAN.md — Configuration UI (industry context + tone selectors + submit wiring)
 
 ### Phase 5: Display & Polish
 **Goal**: Critiques display beautifully with expandable depth, loading states, and error handling
