@@ -2,7 +2,7 @@
 
 ## What This Is
 
-A single-page web app where designers upload a UI screenshot, pick an industry context and critique tone, and get a structured senior-level design critique back in seconds. Think of it as having a senior designer on call 24/7 — no sign-up, no waiting for peer feedback, no posting in Slack and hoping someone responds.
+A single-page web app where designers upload a UI screenshot, pick an industry context and critique tone, and get a structured senior-level design critique back in seconds. Built with Next.js 15, Tailwind CSS 4, ShadCN/ui, and Claude Sonnet 4.5 Vision API. No sign-up, no waiting for peer feedback.
 
 ## Core Value
 
@@ -12,44 +12,52 @@ Designers get actionable, structured feedback on any UI screenshot instantly —
 
 ### Validated
 
-(None yet — ship to validate)
+- ✓ Designer can upload a UI screenshot (PNG, JPG, WebP) via drag-and-drop or file picker — v1.0
+- ✓ App validates file format and size (max 10MB) with clear error messages — v1.0
+- ✓ Images auto-compressed client-side (max 2000px) before API submission — v1.0
+- ✓ Designer sees preview of uploaded image — v1.0
+- ✓ Designer can select industry context (SaaS, Healthcare, Consumer, Ecommerce, Fintech) — v1.0
+- ✓ Designer can select critique tone (Constructive or Roast) — v1.0
+- ✓ Critique returns structured JSON with 4 sections via forced tool_use — v1.0
+- ✓ Each section shows scannable summary with expandable deeper explanations — v1.0
+- ✓ Industry-specific domain heuristics (150-250 words each) inject into prompt — v1.0
+- ✓ Critique tone adjusts language and delivery — v1.0
+- ✓ Loading state with rotating progress messages during AI processing — v1.0
+- ✓ Error handling for API failures, timeouts, and invalid uploads — v1.0
+- ✓ Copy full critique to clipboard with one click — v1.0
+- ✓ ANTHROPIC_API_KEY stored server-side only — v1.0
+- ✓ App deploys from GitHub (Vercel connection pending user action) — v1.0
+- ✓ Works without sign-up, accounts, or saved state — v1.0
 
 ### Active
 
-- [ ] Designer can upload a UI screenshot (PNG, JPG) via drag-and-drop or file picker
-- [ ] Designer can select an industry context (SaaS, Healthcare, Consumer, Ecommerce, Fintech)
-- [ ] Designer can select a critique tone (Constructive or Roast)
-- [ ] Critique returns structured into 4 sections: What Works, Usability Risks, Visual Hierarchy Issues, Concrete Improvements
-- [ ] Each section shows a scannable summary (2-4 bullets) with expandable deeper explanations per point
-- [ ] Critique returns in under 10 seconds
-- [ ] Single page with hero section, sample critiques, and the working upload tool all-in-one
-- [ ] Works without sign-up, accounts, or saved state
-- [ ] Loading state while critique is being generated
-- [ ] Error handling for failed API calls or invalid uploads
+(None — next milestone requirements defined via `/gsd:new-milestone`)
 
 ### Out of Scope
 
-- User accounts or sign-up — zero friction for V1, validate demand first
-- Saved critique history — ephemeral for V1, add database later
-- Payments / Stripe — free to validate, monetize after traction
-- Figma plugin — screenshots work fine, plugin is a V2 convenience feature
+- User accounts / sign-up — zero friction validated, add when demand proven
+- Database / saved history — stateless V1 avoids privacy and storage complexity
+- Payments / Stripe — free to validate, monetize after traction (100+ users)
+- Figma plugin — separate development track, screenshots work fine for V1
 - Team features / collaboration — single player only for V1
 - Native mobile app — responsive web only, designers are on desktop
-- Comparison mode (upload two versions) — V2 feature
-- Custom style guides — V2 feature
+- Real-time streaming responses — full response is only 5-10s, complexity not justified
+- AI-generated visual fix suggestions — image generation unreliable for UI mockups
+- Design scoring / grading — qualitative feedback is more actionable than numbers
+- Landing page / hero / samples — deferred to v1.1, pure core loop validated first
 
 ## Context
 
-- Weekend MVP — optimized for speed-to-ship
-- Target users: solo designers, junior designers, freelancers, design contractors
-- The real product moat is prompt quality, not code — domain-specific context injection (e.g., Healthcare gets accessibility/trust signal heuristics) and critique structure are what make feedback useful vs. generic
-- System prompt uses a "senior product designer with 15+ years experience" persona
-- Context injection means each industry dropdown option adds domain-specific design heuristics to the prompt
-- V1 is stateless — image goes to Claude, critique comes back, nothing stored
+Shipped v1.0 MVP with 1,190 LOC TypeScript in 2 days.
+Tech stack: Next.js 15, Tailwind CSS 4, ShadCN/ui, Claude Sonnet 4.5 Vision API.
+GitHub repo: gbagaoisan/designcritic (public).
+Vercel deployment ready (user needs to connect dashboard + set ANTHROPIC_API_KEY env var).
+Stateless architecture — images sent as base64, nothing stored.
+Product moat is prompt quality: 5 industry-specific heuristic sets (150-250 words each) with domain-specific focus areas.
 
 ## Constraints
 
-- **Tech stack**: Next.js + Tailwind CSS + ShadCN + Claude API (Sonnet) — decided, not negotiable for V1
+- **Tech stack**: Next.js 15 + Tailwind CSS 4 + ShadCN/ui + Claude API (Sonnet 4.5) — decided, not negotiable for V1
 - **Hosting**: Vercel free tier — one-click deploy from GitHub
 - **No database**: Stateless for V1 to avoid privacy/storage complexity
 - **Budget**: ~$0-30 to launch (free tiers + Claude API pay-per-use at ~$0.01-0.03 per critique)
@@ -59,12 +67,17 @@ Designers get actionable, structured feedback on any UI screenshot instantly —
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Next.js + Tailwind + ShadCN | Fast to build, great DX, polished accessible components out of the box | -- Pending |
-| Claude Sonnet for vision | Best vision model for the price, native image analysis | -- Pending |
-| No database for V1 | Ship fast, avoid privacy/storage headaches, validate demand first | -- Pending |
-| Adjustable critique tone | Lets users choose between playful roast and professional feedback — differentiator | -- Pending |
-| Expandable critique depth | Quick summary for scanning + deeper explanations for learning — best of both | -- Pending |
-| All-in-one page | Hero + samples + working tool on single page reduces friction | -- Pending |
+| Next.js 15 + Tailwind 4 + ShadCN | Fast to build, great DX, polished accessible components | ✓ Good — shipped in 2 days |
+| Claude Sonnet 4.5 for vision | Best vision model for speed/quality/price balance | ✓ Good — structured output via tool_use works perfectly |
+| No database for V1 | Ship fast, avoid privacy/storage headaches | ✓ Good — stateless architecture is simpler |
+| Adjustable critique tone | Differentiator — playful roast vs professional feedback | ✓ Good — roast mode still requires actionable feedback |
+| Expandable critique depth | Quick summary + deeper explanations for learning | ✓ Good — multiple expandable points, not accordion |
+| No landing page in V1 | Pure core loop — validate the tool before marketing | ✓ Good — reduced scope, shipped faster |
+| Forced tool_use for structured output | Guarantees JSON schema compliance, no parsing needed | ✓ Good — zero fallback/parsing code needed |
+| Anti-prompt-injection in system prompt | Prevents image text from hijacking Claude's behavior | ✓ Good — security without complexity |
+| Canvas API for client-side compression | No server processing, 2000px max, JPEG 0.85 quality | ✓ Good — balances quality vs payload size |
+| Progressive disclosure UI | Config appears after upload, critique replaces upload | ✓ Good — cleaner flow, less cognitive load |
+| Vercel deployment deferred | User action needed, not blocking development | ⚠️ Revisit — user needs to connect Vercel |
 
 ---
-*Last updated: 2026-02-12 after initialization*
+*Last updated: 2026-02-13 after v1.0 milestone*
