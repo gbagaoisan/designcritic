@@ -76,9 +76,9 @@ export default function Home() {
     setError(null);
     setLoadingMessageIndex(0);
 
-    // Create AbortController with 30-second timeout
+    // Create AbortController with 90-second timeout (vision API can take 30-60s)
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 30000);
+    const timeoutId = setTimeout(() => controller.abort(), 90000);
 
     try {
       const response = await fetch('/api/critique', {

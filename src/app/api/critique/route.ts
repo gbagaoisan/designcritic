@@ -3,6 +3,9 @@ import { z } from 'zod';
 import { getCritique } from '@/lib/claude';
 import type { CritiqueResponse, CritiqueError } from '@/types/critique';
 
+// Allow up to 60s for Claude vision API (Vercel Pro required for >10s)
+export const maxDuration = 60;
+
 const critiqueRequestSchema = z.object({
   image: z.string().min(1),
   mediaType: z.enum(['image/png', 'image/jpeg', 'image/webp']),
