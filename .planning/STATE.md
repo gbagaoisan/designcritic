@@ -5,34 +5,36 @@
 See: .planning/PROJECT.md (updated 2026-02-12)
 
 **Core value:** Designers get actionable, structured feedback on any UI screenshot instantly
-**Current focus:** Phase 1 - Foundation
+**Current focus:** Phase 2 - AI Engine
 
 ## Current Position
 
-Phase: 1 of 5 (Foundation)
-Plan: 3 of 3 in current phase
-Status: Complete — phase 1 finished, ready for phase 2
-Last activity: 2026-02-12 — Completed 01-03-PLAN.md (GitHub & Deployment Setup)
+Phase: 2 of 5 (AI Engine)
+Plan: 1 of 2 in current phase
+Status: In Progress — phase 2 plan 1 complete
+Last activity: 2026-02-13 — Completed 02-01-PLAN.md (Prompt Engine)
 
-Progress: [██████████] 100% (3/3 plans in phase 1)
+Progress: [█████░░░░░] 50% (1/2 plans in phase 2)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 3
+- Total plans completed: 4
 - Average duration: 2 minutes
-- Total execution time: 0.08 hours
+- Total execution time: 0.13 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01 | 3/3 | 5 min | 2 min |
+| 02 | 1/2 | 3 min | 3 min |
 
 **Recent completions:**
 
 | Phase | Plan | Duration | Tasks | Files | Completed |
 |-------|------|----------|-------|-------|-----------|
+| 02 | 01 | 3 min | 2 | 4 | 2026-02-13 |
 | 01 | 03 | 1 min | 2 | 0 | 2026-02-12 |
 | 01 | 02 | 1 min | 2 | 5 | 2026-02-12 |
 | 01 | 01 | 3 min | 2 | 21 | 2026-02-13 |
@@ -54,6 +56,10 @@ Recent decisions affecting current work:
 - [Phase 01-02]: Zod schema validation pattern established for all API route inputs
 - [Phase 01-foundation-03]: GitHub repository created at gbagaoisan/designcritic (public repo)
 - [Phase 01-foundation-03]: Vercel deployment deferred to user discretion (not blocking Phase 2)
+- [Phase 02-01]: Anti-prompt-injection instruction placed in system prompt to prevent image text from hijacking Claude's behavior
+- [Phase 02-01]: Each industry context heuristic is 150-250 words with domain-specific focus areas (product moat)
+- [Phase 02-01]: Roast tone requires actionable feedback with concrete values - humor changes delivery, not quality
+- [Phase 02-01]: Tool definition schema exactly matches CritiqueResult type for type-safe Claude responses
 
 ### Pending Todos
 
@@ -68,6 +74,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-12 (phase 1 execution)
-Stopped at: Completed 01-03-PLAN.md (GitHub & Deployment Setup) — Phase 1 complete
-Resume file: .planning/phases/02-core-functionality/ (next phase)
+Last session: 2026-02-13 (phase 2 execution)
+Stopped at: Completed 02-01-PLAN.md (Prompt Engine) — Phase 2 plan 1 complete
+Resume file: .planning/phases/02-ai-engine/02-02-PLAN.md (next plan)
