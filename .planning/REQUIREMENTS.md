@@ -9,39 +9,39 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Upload
 
-- [ ] **UPLD-01**: Designer can upload a UI screenshot via drag-and-drop or file picker
-- [ ] **UPLD-02**: App accepts PNG, JPG, and WebP formats only
-- [ ] **UPLD-03**: App validates file size (max 10MB) and shows error for invalid files
-- [ ] **UPLD-04**: App compresses/resizes images client-side before sending (max 2000px)
-- [ ] **UPLD-05**: Designer can see a preview of the uploaded image
+- [x] **UPLD-01**: Designer can upload a UI screenshot via drag-and-drop or file picker
+- [x] **UPLD-02**: App accepts PNG, JPG, and WebP formats only
+- [x] **UPLD-03**: App validates file size (max 10MB) and shows error for invalid files
+- [x] **UPLD-04**: App compresses/resizes images client-side before sending (max 2000px)
+- [x] **UPLD-05**: Designer can see a preview of the uploaded image
 
 ### Configuration
 
-- [ ] **CONF-01**: Designer can select an industry context (SaaS, Healthcare, Consumer, Ecommerce, Fintech)
-- [ ] **CONF-02**: Designer can select a critique tone (Constructive or Roast)
+- [x] **CONF-01**: Designer can select an industry context (SaaS, Healthcare, Consumer, Ecommerce, Fintech)
+- [x] **CONF-02**: Designer can select a critique tone (Constructive or Roast)
 
 ### AI Engine
 
-- [ ] **AI-01**: API route sends image + assembled prompt to Claude via server-side route
-- [ ] **AI-02**: System prompt uses structured tool_use for guaranteed JSON output
-- [ ] **AI-03**: Prompt injects domain-specific heuristics based on selected industry context
-- [ ] **AI-04**: Prompt adjusts tone based on selected critique tone
-- [ ] **AI-05**: Critiques reference specific visual elements in the uploaded image
-- [ ] **AI-06**: Critique returns in under 10 seconds
+- [x] **AI-01**: API route sends image + assembled prompt to Claude via server-side route
+- [x] **AI-02**: System prompt uses structured tool_use for guaranteed JSON output
+- [x] **AI-03**: Prompt injects domain-specific heuristics based on selected industry context
+- [x] **AI-04**: Prompt adjusts tone based on selected critique tone
+- [x] **AI-05**: Critiques reference specific visual elements in the uploaded image
+- [x] **AI-06**: Critique returns in under 10 seconds
 
 ### Display
 
-- [ ] **DISP-01**: Critique displays in 4 structured sections: What Works, Usability Risks, Visual Hierarchy Issues, Concrete Improvements
-- [ ] **DISP-02**: Each section shows scannable summary (2-4 bullets) with expandable deeper explanations
-- [ ] **DISP-03**: Loading state shows engaging progress feedback during AI processing
-- [ ] **DISP-04**: Error states display gracefully for API failures, timeouts, and invalid input
-- [ ] **DISP-05**: Designer can copy full critique to clipboard with one click
+- [x] **DISP-01**: Critique displays in 4 structured sections: What Works, Usability Risks, Visual Hierarchy Issues, Concrete Improvements
+- [x] **DISP-02**: Each section shows scannable summary (2-4 bullets) with expandable deeper explanations
+- [x] **DISP-03**: Loading state shows engaging progress feedback during AI processing
+- [x] **DISP-04**: Error states display gracefully for API failures, timeouts, and invalid input
+- [x] **DISP-05**: Designer can copy full critique to clipboard with one click
 
 ### Infrastructure
 
-- [ ] **INFR-01**: ANTHROPIC_API_KEY stored server-side only (never exposed to client)
-- [ ] **INFR-02**: App deploys to Vercel from GitHub with zero-config
-- [ ] **INFR-03**: App works without sign-up, accounts, or saved state
+- [x] **INFR-01**: ANTHROPIC_API_KEY stored server-side only (never exposed to client)
+- [x] **INFR-02**: App deploys to Vercel from GitHub with zero-config
+- [x] **INFR-03**: App works without sign-up, accounts, or saved state
 
 ## v2 Requirements
 
@@ -95,27 +95,27 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| UPLD-01 | Phase 3 | Pending |
-| UPLD-02 | Phase 3 | Pending |
-| UPLD-03 | Phase 3 | Pending |
-| UPLD-04 | Phase 3 | Pending |
-| UPLD-05 | Phase 3 | Pending |
-| CONF-01 | Phase 4 | Pending |
-| CONF-02 | Phase 4 | Pending |
-| AI-01 | Phase 2 | Pending |
-| AI-02 | Phase 2 | Pending |
-| AI-03 | Phase 2 | Pending |
-| AI-04 | Phase 2 | Pending |
-| AI-05 | Phase 2 | Pending |
-| AI-06 | Phase 2 | Pending |
-| DISP-01 | Phase 5 | Pending |
-| DISP-02 | Phase 5 | Pending |
-| DISP-03 | Phase 5 | Pending |
-| DISP-04 | Phase 5 | Pending |
-| DISP-05 | Phase 5 | Pending |
-| INFR-01 | Phase 1 | Pending |
-| INFR-02 | Phase 1 | Pending |
-| INFR-03 | Phase 1 | Pending |
+| UPLD-01 | Phase 3 | Complete |
+| UPLD-02 | Phase 3 | Complete |
+| UPLD-03 | Phase 3 | Complete |
+| UPLD-04 | Phase 3 | Complete |
+| UPLD-05 | Phase 3 | Complete |
+| CONF-01 | Phase 4 | Complete |
+| CONF-02 | Phase 4 | Complete |
+| AI-01 | Phase 2 | Complete |
+| AI-02 | Phase 2 | Complete |
+| AI-03 | Phase 2 | Complete |
+| AI-04 | Phase 2 | Complete |
+| AI-05 | Phase 2 | Complete |
+| AI-06 | Phase 2 | Complete |
+| DISP-01 | Phase 5 | Complete |
+| DISP-02 | Phase 5 | Complete |
+| DISP-03 | Phase 5 | Complete |
+| DISP-04 | Phase 5 | Complete |
+| DISP-05 | Phase 5 | Complete |
+| INFR-01 | Phase 1 | Complete |
+| INFR-02 | Phase 1 | Complete |
+| INFR-03 | Phase 1 | Complete |
 
 **Coverage:**
 - v1 requirements: 21 total
@@ -124,4 +124,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-02-12*
-*Last updated: 2026-02-12 after roadmap creation*
+*Last updated: 2026-02-13 — all v1 requirements complete*

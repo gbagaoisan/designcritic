@@ -16,7 +16,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 2: AI Engine** - Prompt engineering, domain heuristics, structured output
 - [x] **Phase 3: Upload System** - Drag-and-drop, validation, compression, preview
 - [x] **Phase 4: Configuration** - Industry context and critique tone selection
-- [ ] **Phase 5: Display & Polish** - Critique output, loading states, error handling
+- [x] **Phase 5: Display & Polish** - Critique output, loading states, error handling
 
 ## Phase Details
 
@@ -95,7 +95,7 @@ Plans:
 **Plans**: 1 plan
 
 Plans:
-- [ ] 05-01-PLAN.md — Critique display (4 sections, expandable depth, loading, errors, copy)
+- [x] 05-01-PLAN.md — Critique display (4 sections, expandable depth, loading, errors, copy)
 
 ## Progress
 
@@ -108,4 +108,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 2. AI Engine | 2/2 | ✓ Complete | 2026-02-13 |
 | 3. Upload System | 1/1 | ✓ Complete | 2026-02-13 |
 | 4. Configuration | 1/1 | ✓ Complete | 2026-02-13 |
-| 5. Display & Polish | 0/1 | Not started | - |
+| 5. Display & Polish | 1/1 | ✓ Complete | 2026-02-13 |
