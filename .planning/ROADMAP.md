@@ -13,7 +13,7 @@ A five-phase journey delivering a working AI design critique tool. Phase 1 estab
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation** - Next.js scaffolding, Claude API integration, deployment
-- [ ] **Phase 2: AI Engine** - Prompt engineering, domain heuristics, structured output
+- [x] **Phase 2: AI Engine** - Prompt engineering, domain heuristics, structured output
 - [ ] **Phase 3: Upload System** - Drag-and-drop, validation, compression, preview
 - [ ] **Phase 4: Configuration** - Industry context and critique tone selection
 - [ ] **Phase 5: Display & Polish** - Critique output, loading states, error handling
@@ -50,8 +50,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 02-01-PLAN.md — Prompt engine (system prompt + contexts + tones + tool definition)
-- [ ] 02-02-PLAN.md — Claude integration (real API calls replacing mock data)
+- [x] 02-01-PLAN.md — Prompt engine (system prompt + contexts + tones + tool definition)
+- [x] 02-02-PLAN.md — Claude integration (real API calls replacing mock data)
 
 ### Phase 3: Upload System
 **Goal**: Designers can upload UI screenshots with validation, compression, and preview
@@ -105,7 +105,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | ✓ Complete | 2026-02-13 |
-| 2. AI Engine | 0/2 | Planned | - |
+| 2. AI Engine | 2/2 | ✓ Complete | 2026-02-13 |
 | 3. Upload System | 0/TBD | Not started | - |
 | 4. Configuration | 0/TBD | Not started | - |
 | 5. Display & Polish | 0/TBD | Not started | - |
