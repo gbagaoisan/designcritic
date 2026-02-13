@@ -92,10 +92,10 @@ Plans:
   3. Loading state shows engaging progress feedback while waiting for Claude response
   4. API failures, timeouts, and invalid uploads display helpful error messages (not technical stack traces)
   5. Designer can copy full critique text to clipboard with one button click
-**Plans**: TBD
+**Plans**: 1 plan
 
 Plans:
-- [ ] TBD during plan-phase
+- [ ] 05-01-PLAN.md — Critique display (4 sections, expandable depth, loading, errors, copy)
 
 ## Progress
 
@@ -108,4 +108,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 2. AI Engine | 2/2 | ✓ Complete | 2026-02-13 |
 | 3. Upload System | 1/1 | ✓ Complete | 2026-02-13 |
 | 4. Configuration | 1/1 | ✓ Complete | 2026-02-13 |
-| 5. Display & Polish | 0/TBD | Not started | - |
+| 5. Display & Polish | 0/1 | Not started | - |
