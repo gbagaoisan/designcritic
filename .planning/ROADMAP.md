@@ -12,7 +12,7 @@ A five-phase journey delivering a working AI design critique tool. Phase 1 estab
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation** - Next.js scaffolding, Claude API integration, deployment
+- [x] **Phase 1: Foundation** - Next.js scaffolding, Claude API integration, deployment
 - [ ] **Phase 2: AI Engine** - Prompt engineering, domain heuristics, structured output
 - [ ] **Phase 3: Upload System** - Drag-and-drop, validation, compression, preview
 - [ ] **Phase 4: Configuration** - Industry context and critique tone selection
@@ -32,9 +32,9 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 3 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Project scaffolding (Next.js + ShadCN + types)
-- [ ] 01-02-PLAN.md — API layer (Claude SDK + env config + stub route)
-- [ ] 01-03-PLAN.md — GitHub + Vercel deployment
+- [x] 01-01-PLAN.md — Project scaffolding (Next.js + ShadCN + types)
+- [x] 01-02-PLAN.md — API layer (Claude SDK + env config + stub route)
+- [x] 01-03-PLAN.md — GitHub + Vercel deployment
 
 ### Phase 2: AI Engine
 **Goal**: Claude API returns structured design critiques based on industry context and tone
@@ -103,7 +103,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/3 | Planned | - |
+| 1. Foundation | 3/3 | ✓ Complete | 2026-02-13 |
 | 2. AI Engine | 0/TBD | Not started | - |
 | 3. Upload System | 0/TBD | Not started | - |
 | 4. Configuration | 0/TBD | Not started | - |
