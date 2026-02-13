@@ -2,7 +2,10 @@
 
 import { useState } from 'react';
 import { CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import { UploadZone } from '@/components/upload-zone';
+import { CritiqueConfig } from '@/components/critique-config';
+import { IndustryContext, CritiqueTone, CritiqueResult } from '@/types/critique';
 
 export default function Home() {
   const [uploadedImage, setUploadedImage] = useState<{
@@ -11,6 +14,15 @@ export default function Home() {
     fileName: string;
   } | null>(null);
   const [imagePreview, setImagePreview] = useState<string | null>(null);
+
+  // Configuration state
+  const [selectedContext, setSelectedContext] = useState<IndustryContext>('saas');
+  const [selectedTone, setSelectedTone] = useState<CritiqueTone>('constructive');
+
+  // Submit state
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [critiqueResult, setCritiqueResult] = useState<CritiqueResult | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   const handleImageReady = (data: {
     base64: string;
@@ -31,6 +43,43 @@ export default function Home() {
   const handleImageRemove = () => {
     setUploadedImage(null);
     setImagePreview(null);
+    setCritiqueResult(null);
+    setError(null);
+  };
+
+  const handleSubmit = async () => {
+    if (!uploadedImage) return;
+
+    setIsSubmitting(true);
+    setError(null);
+
+    try {
+      const response = await fetch('/api/critique', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          image: uploadedImage.base64,
+          mediaType: uploadedImage.mediaType,
+          context: selectedContext,
+          tone: selectedTone,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        setError(data.error || 'Failed to generate critique');
+        return;
+      }
+
+      setCritiqueResult(data.critique);
+    } catch (err) {
+      setError('Network error. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -48,6 +97,30 @@ export default function Home() {
           onImageRemove={handleImageRemove}
           imagePreview={imagePreview}
         />
+
+        {uploadedImage && (
+          <div className="mt-6 space-y-6">
+            <CritiqueConfig
+              selectedContext={selectedContext}
+              selectedTone={selectedTone}
+              onContextChange={setSelectedContext}
+              onToneChange={setSelectedTone}
+            />
+
+            <Button
+              onClick={handleSubmit}
+              disabled={isSubmitting || !uploadedImage}
+              className="w-full"
+              size="lg"
+            >
+              {isSubmitting ? 'Analyzing...' : 'Get Critique'}
+            </Button>
+
+            {error && (
+              <p className="text-sm text-red-600 text-center">{error}</p>
+            )}
+          </div>
+        )}
       </main>
     </div>
   );
