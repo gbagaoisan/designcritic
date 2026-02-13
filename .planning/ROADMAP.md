@@ -29,10 +29,12 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. App deploys to Vercel from GitHub with zero manual config
   3. ANTHROPIC_API_KEY is stored server-side only and never exposed to client
   4. App loads in browser without sign-up or authentication
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] TBD during plan-phase
+- [ ] 01-01-PLAN.md — Project scaffolding (Next.js + ShadCN + types)
+- [ ] 01-02-PLAN.md — API layer (Claude SDK + env config + stub route)
+- [ ] 01-03-PLAN.md — GitHub + Vercel deployment
 
 ### Phase 2: AI Engine
 **Goal**: Claude API returns structured design critiques based on industry context and tone
@@ -101,7 +103,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/TBD | Not started | - |
+| 1. Foundation | 0/3 | Planned | - |
 | 2. AI Engine | 0/TBD | Not started | - |
 | 3. Upload System | 0/TBD | Not started | - |
 | 4. Configuration | 0/TBD | Not started | - |
