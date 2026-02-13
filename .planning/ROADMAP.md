@@ -64,10 +64,10 @@ Plans:
   4. App rejects files over 10MB with clear error message
   5. Images are automatically compressed/resized to max 2000px before sending to API
   6. Designer sees preview of uploaded image before submitting for critique
-**Plans**: TBD
+**Plans**: 1 plan
 
 Plans:
-- [ ] TBD during plan-phase
+- [ ] 03-01-PLAN.md — Upload zone (drag-and-drop, validation, compression, preview)
 
 ### Phase 4: Configuration
 **Goal**: Designers can customize critique with industry context and tone selection
@@ -106,6 +106,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | ✓ Complete | 2026-02-13 |
 | 2. AI Engine | 2/2 | ✓ Complete | 2026-02-13 |
-| 3. Upload System | 0/TBD | Not started | - |
+| 3. Upload System | 0/1 | Planned | - |
 | 4. Configuration | 0/TBD | Not started | - |
 | 5. Display & Polish | 0/TBD | Not started | - |
