@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { CritiqueResult, CritiquePoint } from '@/types/critique';
 import {
   CheckCircle,
@@ -11,13 +10,13 @@ import {
   Lightbulb,
   ChevronDown,
   ChevronUp,
-  Copy,
-  Check,
 } from 'lucide-react';
+
+type FilterKey = 'all' | 'what_works' | 'usability_risks' | 'visual_hierarchy' | 'improvements';
 
 interface CritiqueDisplayProps {
   critique: CritiqueResult;
-  onNewCritique: () => void;
+  filter: FilterKey;
 }
 
 interface SectionConfig {
@@ -34,9 +33,8 @@ const SECTIONS: SectionConfig[] = [
   { key: 'improvements', title: 'Concrete Improvements', icon: Lightbulb, iconColor: 'text-purple-500' },
 ];
 
-export function CritiqueDisplay({ critique, onNewCritique }: CritiqueDisplayProps) {
+export function CritiqueDisplay({ critique, filter }: CritiqueDisplayProps) {
   const [expandedPoints, setExpandedPoints] = useState<Set<string>>(new Set());
-  const [copied, setCopied] = useState(false);
 
   const togglePoint = (sectionKey: string, pointIndex: number) => {
     const pointId = `${sectionKey}-${pointIndex}`;
@@ -51,53 +49,9 @@ export function CritiqueDisplay({ critique, onNewCritique }: CritiqueDisplayProp
     });
   };
 
-  const handleCopy = async () => {
-    // Format the entire critique as plain text
-    const sections = SECTIONS.map((section) => {
-      const points = critique[section.key];
-      const pointsText = points
-        .map((point) => `  - ${point.summary}: ${point.detail}`)
-        .join('\n');
-      return `${section.title.toUpperCase()}\n${pointsText}`;
-    });
-
-    const fullText = sections.join('\n\n');
-
-    try {
-      await navigator.clipboard.writeText(fullText);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch (err) {
-      console.error('Failed to copy:', err);
-    }
-  };
-
   return (
     <div className="space-y-4">
-      {/* Copy button at top-right */}
-      <div className="flex justify-end">
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={handleCopy}
-          className="gap-2"
-        >
-          {copied ? (
-            <>
-              <Check className="h-4 w-4" />
-              Copied!
-            </>
-          ) : (
-            <>
-              <Copy className="h-4 w-4" />
-              Copy Critique
-            </>
-          )}
-        </Button>
-      </div>
-
-      {/* Render all 4 sections */}
-      {SECTIONS.map((section) => {
+      {(filter === 'all' ? SECTIONS : SECTIONS.filter(s => s.key === filter)).map((section) => {
         const Icon = section.icon;
         const points = critique[section.key];
 
@@ -137,13 +91,6 @@ export function CritiqueDisplay({ critique, onNewCritique }: CritiqueDisplayProp
           </Card>
         );
       })}
-
-      {/* New Critique button */}
-      <div className="flex justify-center pt-4">
-        <Button onClick={onNewCritique} size="lg">
-          Start New Critique
-        </Button>
-      </div>
     </div>
   );
 }
